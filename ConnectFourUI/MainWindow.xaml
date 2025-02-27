@@ -1,0 +1,105 @@
+﻿<Window x:Class="ConnectFourUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local ="clr-namespace:ConnectFourUI"
+        Title="MainWindow" Height="600" Width="800">
+    <Grid x:Name="MainGrid">
+        <Grid.Resources>
+            <ResourceDictionary 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+                <Button x:Shared="False" x:Key="buttonResource" Content="M"/>
+            </ResourceDictionary>
+        </Grid.Resources>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="0.66*"/>
+            <RowDefinition Height="7*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Viewbox Grid.Column="1">
+            <Label Content="{Binding GameHeader, FallbackValue=Welcome!!}"/>
+        </Viewbox>
+        <!--<local:BlueToken/>-->
+        <Button Content="{Binding NextTile}"/>
+
+            <Label Content="Click a header (letter) button to play" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center"/>
+        <Button Content="Reset" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Right" Background="Pink"
+                MinWidth="{Binding ElementName=btnA, Path=ActualWidth}" Click="Button_Click"/>
+            <Grid  Grid.Column="1" Grid.Row="2">
+            <Grid.Resources>
+                <ResourceDictionary>
+                    <Style TargetType="Button">
+                        <Setter Property="Background" Value="LightBlue"/>
+                    </Style>
+                </ResourceDictionary>
+            </Grid.Resources>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button Name="btnA" Content="A" Click="btnA_Click"/>
+            <Button Name="btnB" Grid.Column="1" Content="B" Click="btnB_Click"/>
+            <Button Name="btnC" Grid.Column="2" Content="C" Click="btnC_Click"/>
+            <Button Name="btnD" Grid.Column="3" Content="D" Click="btnD_Click"/>
+            <Button Name="btnE" Grid.Column="4" Content="E" Click="btnE_Click"/>
+            <Button Name="btnF" Grid.Column="5" Content="F" Click="btnF_Click"/>
+            <Button Name="btnH" Grid.Column="6" Content="G" Click="btnH_Click"/>
+        </Grid>
+
+        <!--<DataGrid CanUserAddRows="False" CanUserDeleteRows="False" CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserResizeRows="False"
+                  Grid.Row="3" Grid.Column="1" IsReadOnly="True" AutoGenerateColumns="False" 
+                  ItemsSource="{Binding TokenBoard}" PreviewMouseDown="DataGrid_PreviewMouseDown">
+            <DataGrid.Resources>
+                <ResourceDictionary>
+                    <Style TargetType="DataGridCell" >
+                        <Setter Property="MinHeight" Value="50"/>
+                    </Style>
+                </ResourceDictionary>
+            </DataGrid.Resources>
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Path=A , StringFormat=d, ValidatesOnExceptions=True}" Width="*" />
+                <DataGridTextColumn Binding="{Binding Path=B , StringFormat=d, ValidatesOnExceptions=True}"  Width="*" />
+                <DataGridTextColumn Binding="{Binding Path=C , StringFormat=d, ValidatesOnExceptions=True}"  Width="*" />
+                <DataGridTextColumn Binding="{Binding Path=D , StringFormat=d, ValidatesOnExceptions=True}"  Width="*" />
+                <DataGridTextColumn Binding="{Binding Path=E , StringFormat=d, ValidatesOnExceptions=True}"  Width="*" />
+                <DataGridTextColumn Binding="{Binding Path=F , StringFormat=d, ValidatesOnExceptions=True}"  Width="*" />
+                <DataGridTextColumn Binding="{Binding Path=G , StringFormat=d, ValidatesOnExceptions=True}"  Width="*" />
+            </DataGrid.Columns>
+
+        </DataGrid>-->
+        <Grid x:Name="PlayGrid" Grid.Row="3" Grid.Column="1" Background="Yellow">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+        </Grid>
+    </Grid>
+
+</Window>

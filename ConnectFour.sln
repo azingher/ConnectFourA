@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnectFourDL", "ConnectFourDL\ConnectFourDL.csproj", "{90A7DE2D-EA8A-481F-AFBF-6CB6ADE1E686}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnectFourUI", "ConnectFourUI\ConnectFourUI.csproj", "{1077BB94-421B-40B1-8661-3CB27A8B0EDE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{90A7DE2D-EA8A-481F-AFBF-6CB6ADE1E686}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90A7DE2D-EA8A-481F-AFBF-6CB6ADE1E686}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90A7DE2D-EA8A-481F-AFBF-6CB6ADE1E686}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90A7DE2D-EA8A-481F-AFBF-6CB6ADE1E686}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1077BB94-421B-40B1-8661-3CB27A8B0EDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1077BB94-421B-40B1-8661-3CB27A8B0EDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1077BB94-421B-40B1-8661-3CB27A8B0EDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1077BB94-421B-40B1-8661-3CB27A8B0EDE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
